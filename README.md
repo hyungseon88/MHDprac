@@ -24,9 +24,7 @@ The simulation results will be displayed in a separate window.
 
 ### Contents:
 
-- Lax_FriedrichsZeroFlux.py: This file contains a 1D MHD simulation code using the Lax-Friedrichs
-scheme for solving the ideal MHD equations. But Flux function give zeros to see that Lax-Friedrichs
-scheme is not generally monotone.
+- Caution on the each scheme
 
 ### Notes:
 

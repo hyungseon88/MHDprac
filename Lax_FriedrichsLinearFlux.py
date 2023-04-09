@@ -2,19 +2,20 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Define parameters
-nx = 100  # number of grid points
-L = 1.0   # length of domain
+nx = 150  # number of grid points
+L = 15 # length of domain
 dx = L / nx  # grid spacing
 c = 1.0   # wave speed
 t_final = 1  # final time
-dt = 0.5 * dx / abs(c)  # time step
+dt = 0.2 * dx / abs(c)  # time step
 
 # Define initial condition
 x = np.linspace(0, L, nx)
 u = np.zeros(nx)
 
 # Initial condition
-u[0] = 1
+u[(x>=3) & (x<=4)] = 1
+#u[(x>=3) & (x<=(4+dx))] = 1
 
 # Lax–Friedrichs method
 def update(u):
